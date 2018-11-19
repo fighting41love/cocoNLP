@@ -14,6 +14,7 @@ python setup.py install
 
 ## Quick start
 ```
+from cocoNLP import rake
 r = rake.Rake()
 
 r.extract_keywords_from_text(texts, 2, 4)
