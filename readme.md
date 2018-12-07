@@ -55,7 +55,7 @@ time {"type": "timestamp", "timestamp": "2018-11-27 11:00:00"}
 ```
 >>> name = ex.extract_name(text)
 >>> print(name)
-王龙
+特朗普
 ```
 ### Extract phrases from texts
 ```
