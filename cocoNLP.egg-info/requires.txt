@@ -1,0 +1,4 @@
+jieba
+pyhanlp
+phone
+phonenumbers

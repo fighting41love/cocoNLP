@@ -64,6 +64,6 @@ setup(
         "Topic :: Software Development :: Build Tools",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    install_requires=["jieba"],
+    install_requires=["jieba","pyhanlp","phone","phonenumbers"],
     cmdclass={"develop": PostDevelop, "install": PostInstall},
 )

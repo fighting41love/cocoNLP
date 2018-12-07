@@ -1,1 +1,2 @@
-include data/stopwords.txt
+include cocoNLP/config *
+recursive-include cocoNLP/config *
