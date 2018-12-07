@@ -1,8 +1,8 @@
-### This is a Chinese nlp repo, which can extract information from texts.
+### This is a Chinese nlp package, which can extract information from texts.
 
 ## installation
 ```
-pip install cocoNLP==0.0.5
+pip install cocoNLP
 ```
 
 ## Directly from the repository
