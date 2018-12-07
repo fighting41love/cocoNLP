@@ -1,4 +1,4 @@
-### This is a Chinese nlp repo, which can extract key phrase from texts.
+### This is a Chinese nlp repo, which can extract information from texts.
 
 ## installation
 ```
