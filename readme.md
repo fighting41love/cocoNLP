@@ -1,4 +1,5 @@
-### This is a Chinese nlp package, which can extract information from texts.
+## This is a Chinese nlp package, which can extract information from texts.
+## It is developed for a public welfare program, a weibo robot [@寻人微博](https://weibo.com/xrwbyangyangfuture).
 
 ## installation
 ```
@@ -22,6 +23,7 @@ python setup.py install
 
 >>> text = '急寻特朗普，男孩，于2018年11月27号11时在陕西省安康市汉滨区走失。丢失发型短发，...如有线索，请迅速与警方联系：18100065143，132-6156-2938，baizhantang@sina.com.cn 和yangyangfuture at gmail dot com'
 
+# 抽取邮箱
 >>> emails = ex.extract_email(text)
 >>> print(emails)
 
@@ -29,6 +31,7 @@ python setup.py install
 ```
 
 ```
+# 抽取手机号
 >>> cellphones = ex.extract_cellphone(text,nation='CHN')
 >>> print(cellphones)
 
@@ -36,6 +39,7 @@ python setup.py install
 ```
 
 ```
+# 抽取手机归属地、运营商
 >>> cell_locs = [ex.extract_cellphone_location(cell,'CHN') for cell in cellphones]
 >>> print(cell_locs)
 
@@ -43,19 +47,23 @@ cellphone_location [{'phone': '18100065143', 'province': '上海', 'city': '上�
 ```
 
 ```
+# 抽取地址信息
 >>> locations = ex.extract_locations(text)
 >>> print(locations)
 ['陕西省安康市汉滨区', '安康市汉滨区', '汉滨区']
 ```
 ```
+# 抽取时间点
 >>> times = ex.extract_time(text)
 >>> print(times)
 time {"type": "timestamp", "timestamp": "2018-11-27 11:00:00"}
 ```
 ```
+# 抽取人名
 >>> name = ex.extract_name(text)
 >>> print(name)
 特朗普
+
 ```
 ### Extract phrases from texts
 ```
