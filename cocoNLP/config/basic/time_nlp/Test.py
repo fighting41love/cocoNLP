@@ -6,7 +6,7 @@
 # @Software: PyCharm
 # @Changed : tianyuningmou
 
-from TimeNormalizer import TimeNormalizer # 引入包
+from  cocoNLP.config.basic.time_nlp.TimeNormalizer import TimeNormalizer # 引入包
 
 tn = TimeNormalizer()
 

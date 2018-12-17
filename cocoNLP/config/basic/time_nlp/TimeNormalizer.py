@@ -10,9 +10,9 @@ import arrow
 import json
 import os
 
-from StringPreHandler import StringPreHandler
-from TimePoint import TimePoint
-from TimeUnit import TimeUnit
+from cocoNLP.config.basic.time_nlp.StringPreHandler import StringPreHandler
+from cocoNLP.config.basic.time_nlp.TimePoint import TimePoint
+from cocoNLP.config.basic.time_nlp.TimeUnit import TimeUnit
 
 # 时间表达式识别的主要工作类
 class TimeNormalizer:

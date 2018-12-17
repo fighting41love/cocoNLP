@@ -10,13 +10,13 @@
 import regex as re
 import arrow
 import copy
-from TimePoint import TimePoint
-from RangeTimeEnum import RangeTimeEnum
+from cocoNLP.config.basic.time_nlp.TimePoint import TimePoint
+from cocoNLP.config.basic.time_nlp.RangeTimeEnum import RangeTimeEnum
 
 try:
-    from LunarSolarConverter.LunarSolarConverter import *
+    from cocoNLP.config.basic.time_nlp.LunarSolarConverter.LunarSolarConverter import *
 except:
-    from LunarSolarConverter import *
+    from cocoNLP.config.basic.time_nlp.LunarSolarConverter import *
 
 
 # 时间语句分析
