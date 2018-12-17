@@ -1,4 +1,7 @@
 ## This is a Chinese nlp package, which can extract information from texts.
+
+[![pypiv](https://img.shields.io/pypi/v/rake-nltk.svg)](https://pypi.org/project/cocoNLP/)
+
 ## It is developed for a public welfare program, a weibo robot [@寻人微博](https://weibo.com/xrwbyangyangfuture).
 
 ## installation
