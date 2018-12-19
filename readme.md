@@ -6,6 +6,7 @@
 ## It is developed for a public welfare program, a weibo robot [@寻人微博](https://weibo.com/xrwbyangyangfuture).
 
 ## installation
+It works well on macOS Mojave with python=3.6.
 ```
 pip install cocoNLP
 ```
