@@ -1,6 +1,7 @@
-.DS_Store
+.gitignore
 MANIFEST.in
 readme.md
+requirements.txt
 setup.py
 cocoNLP/__init__.py
 cocoNLP/__version__.py
@@ -10,7 +11,6 @@ cocoNLP.egg-info/SOURCES.txt
 cocoNLP.egg-info/dependency_links.txt
 cocoNLP.egg-info/requires.txt
 cocoNLP.egg-info/top_level.txt
-cocoNLP/config/.DS_Store
 cocoNLP/config/basic/time_nlp/LunarSolarConverter.py
 cocoNLP/config/basic/time_nlp/README.md
 cocoNLP/config/basic/time_nlp/RangeTimeEnum.py
@@ -32,13 +32,20 @@ cocoNLP/config/basic/time_nlp/TimeConverter.egg-info/dependency_links.txt
 cocoNLP/config/basic/time_nlp/TimeConverter.egg-info/not-zip-safe
 cocoNLP/config/basic/time_nlp/TimeConverter.egg-info/requires.txt
 cocoNLP/config/basic/time_nlp/TimeConverter.egg-info/top_level.txt
+cocoNLP/config/basic/time_nlp/__pycache__/LunarSolarConverter.cpython-35.pyc
 cocoNLP/config/basic/time_nlp/__pycache__/LunarSolarConverter.cpython-36.pyc
+cocoNLP/config/basic/time_nlp/__pycache__/RangeTimeEnum.cpython-35.pyc
 cocoNLP/config/basic/time_nlp/__pycache__/RangeTimeEnum.cpython-36.pyc
+cocoNLP/config/basic/time_nlp/__pycache__/StringPreHandler.cpython-35.pyc
 cocoNLP/config/basic/time_nlp/__pycache__/StringPreHandler.cpython-36.pyc
 cocoNLP/config/basic/time_nlp/__pycache__/Test.cpython-36.pyc
+cocoNLP/config/basic/time_nlp/__pycache__/TimeNormalizer.cpython-35.pyc
 cocoNLP/config/basic/time_nlp/__pycache__/TimeNormalizer.cpython-36.pyc
+cocoNLP/config/basic/time_nlp/__pycache__/TimePoint.cpython-35.pyc
 cocoNLP/config/basic/time_nlp/__pycache__/TimePoint.cpython-36.pyc
+cocoNLP/config/basic/time_nlp/__pycache__/TimeUnit.cpython-35.pyc
 cocoNLP/config/basic/time_nlp/__pycache__/TimeUnit.cpython-36.pyc
+cocoNLP/config/basic/time_nlp/__pycache__/__init__.cpython-35.pyc
 cocoNLP/config/basic/time_nlp/__pycache__/__init__.cpython-36.pyc
 cocoNLP/config/basic/time_nlp/resource/__init__.py
 cocoNLP/config/basic/time_nlp/resource/holi_lunar.json

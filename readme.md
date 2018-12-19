@@ -14,6 +14,7 @@ pip install cocoNLP
 
 ```
 git clone https://github.com/fighting41love/cocoNLP.git
+cd cocoNLP
 python setup.py install
 ```
 

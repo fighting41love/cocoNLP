@@ -1,9 +1,10 @@
-#!/usr/bin/env python
 from os import path
 
 from setuptools import setup
 from setuptools.command.develop import develop
 from setuptools.command.install import install
+from subprocess import call
+
 
 here = path.abspath(path.dirname(__file__))
 
@@ -21,6 +22,11 @@ class PostInstall(install):
     def run(self):
         install.run(self)
 
+
+class MyInstall(install):
+    def run(self):
+        call(["pip install -r requirements.txt --no-clean"], shell=True)
+        install.run(self)
 
 # Get package and author details.
 about = {}
@@ -64,6 +70,7 @@ setup(
         "Topic :: Software Development :: Build Tools",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
+    setup_requires=["jieba","pyhanlp","phone","phonenumbers","regex","arrow"],
     install_requires=["jieba","pyhanlp","phone","phonenumbers","regex","arrow"],
-    cmdclass={"develop": PostDevelop, "install": PostInstall},
+    cmdclass={'install': MyInstall},
 )
