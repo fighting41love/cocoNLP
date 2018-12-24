@@ -57,7 +57,7 @@ class TimeNormalizer:
 
     def init(self):
         fpath = os.path.dirname(__file__) + '/resource/reg.pkl'
-        # print(fpath)
+        # print(os.path.dirname(__file__))
         try:
             with open(fpath, 'rb') as f:
                 pattern = pickle.load(f)
