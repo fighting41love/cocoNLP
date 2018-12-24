@@ -10,7 +10,7 @@
 __title__ = "cocoNLP"
 __description__ = "Python implementation of many nlp algorithms"
 __url__ = "https://github.com/fighting41love"
-__version__ = "0.0.10"
+__version__ = "0.0.9"
 __author__ = "Yang Yang"
 __author_email__ = "yangyangfuture@gmail.com"
 __license__ = "MIT"

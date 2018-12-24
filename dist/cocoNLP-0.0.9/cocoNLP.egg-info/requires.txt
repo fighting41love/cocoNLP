@@ -1,0 +1,6 @@
+jieba
+pyhanlp
+phone
+phonenumbers
+regex
+arrow

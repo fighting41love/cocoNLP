@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: cocoNLP
+Version: 0.0.9
+Summary: Python implementation of many nlp algorithms
+Home-page: https://github.com/fighting41love
+Author: Yang Yang
+Author-email: yangyangfuture@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: nlp text-mining information extraction
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

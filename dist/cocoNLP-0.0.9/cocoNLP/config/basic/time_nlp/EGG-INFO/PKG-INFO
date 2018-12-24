@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: TimeConverter
+Version: 1.1.0
+Summary: ...
+Home-page: http://test.com
+Author: test
+Author-email: test@gmail.com
+License: MIT Licence
+Description: ...
+Keywords: time,nlp
+Platform: any
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
