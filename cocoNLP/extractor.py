@@ -61,11 +61,11 @@ class extractor():
         :return: email_addresses_list<list>
         """
         eng_texts = self.replace_chinese(text)
-        sep = ',!?:; ：，。！？《》、|\\/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        sep = ',!?:; ：，.。！？《》、|\\/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         eng_split_texts = [''.join(g) for k, g in groupby(eng_texts, sep.__contains__) if not k]
         eng_split_texts_clean = [ele for ele in eng_split_texts if len(ele)>=7 and len(ele)<17]
         if nation=='CHN':
-            phone_pattern = '((\+86)?([- ])?)?(|(13[0-9])|(14[0-9])|(15[0-9])|(17[0-9])|(18[0-9])|(19[0-9]))([- ])?\d{3}([- ])?\d{4}([- ])?\d{4}'
+            phone_pattern = r'^((\+86)?([- ])?)?(|(13[0-9])|(14[0-9])|(15[0-9])|(17[0-9])|(18[0-9])|(19[0-9]))([- ])?\d{3}([- ])?\d{4}([- ])?\d{4}$'
 
         phones = []
         for eng_text in eng_split_texts_clean:
