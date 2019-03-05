@@ -89,13 +89,13 @@ class Rake(object):
 
     def tokenize_chinese(self,text):
 
-        sentences = re.split('(。|！|\!|\.|？|\?)', text)  # 保留分割符
+        sentences = re.split(r'(，|。|！|\!|\.|？|\?)', text)  # 保留分割符
 
         new_sents = []
         for i in range(int(len(sentences) / 2)):
             sent = sentences[2 * i] + sentences[2 * i + 1]
             new_sents.append(sent)
-        return new_sents
+        return sentences
 
     def extract_keywords_from_text(self, text, min_len, max_len):
         """Method to extract keywords from the text provided.

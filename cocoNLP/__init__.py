@@ -10,6 +10,6 @@
 
 """
 cocoNLP module
-:copyright: (c) 2018 by Yang Yang.
+:copyright: (c) 2019 by Yang Yang.
 :license: MIT, see LICENSE for more details.
 """

@@ -1,8 +1,9 @@
-.gitignore
+.DS_Store
 MANIFEST.in
 readme.md
 requirements.txt
 setup.py
+test.py
 cocoNLP/__init__.py
 cocoNLP/__version__.py
 cocoNLP/extractor.py
@@ -11,6 +12,8 @@ cocoNLP.egg-info/SOURCES.txt
 cocoNLP.egg-info/dependency_links.txt
 cocoNLP.egg-info/requires.txt
 cocoNLP.egg-info/top_level.txt
+cocoNLP/config/.DS_Store
+cocoNLP/config/basic/time_nlp/.DS_Store
 cocoNLP/config/basic/time_nlp/LunarSolarConverter.py
 cocoNLP/config/basic/time_nlp/README.md
 cocoNLP/config/basic/time_nlp/RangeTimeEnum.py
@@ -51,6 +54,8 @@ cocoNLP/config/basic/time_nlp/resource/__init__.py
 cocoNLP/config/basic/time_nlp/resource/holi_lunar.json
 cocoNLP/config/basic/time_nlp/resource/holi_solar.json
 cocoNLP/config/basic/time_nlp/resource/reg.pkl
+cocoNLP/config/basic/time_nlp/resource/regex.txt
 cocoNLP/config/basic/time_nlp/resource/__pycache__/__init__.cpython-36.pyc
 cocoNLP/config/phrase/rake.py
+cocoNLP/config/phrase/__pycache__/rake.cpython-36.pyc
 cocoNLP/config/phrase/data/stopwords.txt

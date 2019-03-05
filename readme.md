@@ -45,6 +45,14 @@ python setup.py install
 ```
 
 ```
+# 抽取身份证号
+>>> ids = ex.extract_ids(text)
+>>> print(ids)
+
+['410105196904010537']
+```
+
+```
 # 抽取手机归属地、运营商
 >>> cell_locs = [ex.extract_cellphone_location(cell,'CHN') for cell in cellphones]
 >>> print(cell_locs)

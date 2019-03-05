@@ -32,8 +32,19 @@ class TimeUnit:
         self.isAllDayTime = True
         self.time = arrow.now()
         self.time_normalization()
+    def get_cur_time(self):
+        now_time = str(arrow.now())
+        time_list = [0 for i in range(5)]
+        time_list[0] = int(now_time[0:4])
+        time_list[1] = int(now_time[5:7])
+        time_list[2] = int(now_time[8:10])
+        time_list[3] = int(now_time[11:13])
+        time_list[4] = int(now_time[14:16])
+        # time_list[5] = int(now_time[21:23])
+        return time_list
 
     def time_normalization(self):
+        self.tp_origin.tunit = self.get_cur_time()#[2019,3,5,18,30]#copy.deepcopy(self.tp.tunit)
         self.norm_setyear()
         self.norm_setmonth()
         self.norm_setday()
@@ -47,7 +58,6 @@ class TimeUnit:
         self.norm_setSpanRelated()
         self.norm_setHoliday()
         self.modifyTimeBase()
-        self.tp_origin.tunit = copy.deepcopy(self.tp.tunit)
 
         # 判断是时间点还是时间区间
         flag = True
@@ -1021,6 +1031,7 @@ class TimeUnit:
             if self.tp.tunit[i] == -1 and self.tp_origin.tunit[i] != -1:
                 self.tp.tunit[i] = self.tp_origin.tunit[i]
         # 在处理小时这个级别时，如果上文时间是下午的且下文没有主动声明小时级别以上的时间，则也把下文时间设为下午
+        # print('comparision time is ',self.tp_origin.tunit[checkTimeIndex])
         if self.isFirstTimeSolveContext is True and checkTimeIndex == 3 and self.tp_origin.tunit[
             checkTimeIndex] >= 12 and self.tp.tunit[checkTimeIndex] < 12:
             self.tp.tunit[checkTimeIndex] += 12
