@@ -14,6 +14,7 @@ from enum import Enum
 
 import os
 import sys
+import codecs
 pwd_path = os.path.abspath(os.path.dirname(__file__))
 
 
@@ -79,7 +80,7 @@ class Rake(object):
         :param path: 停用词表path，提前整理好的，直接读进来
         :return: list<stopwords>
         """
-        with open(path) as f:
+        with codecs.open(path, 'r', 'utf-8-sig') as f:
             stopwords = f.readlines()
         stopwords_list = []
         for word in stopwords:
