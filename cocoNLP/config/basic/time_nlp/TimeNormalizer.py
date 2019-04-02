@@ -9,6 +9,7 @@ import regex as re
 import arrow
 import json
 import os
+import codecs
 
 
 from cocoNLP.config.basic.time_nlp.StringPreHandler import StringPreHandler
@@ -16,6 +17,8 @@ from cocoNLP.config.basic.time_nlp.TimePoint import TimePoint
 from cocoNLP.config.basic.time_nlp.TimeUnit import TimeUnit
 
 # 时间表达式识别的主要工作类
+
+
 class TimeNormalizer:
     def __init__(self, isPreferFuture=True):
         self.isPreferFuture = isPreferFuture
@@ -63,16 +66,16 @@ class TimeNormalizer:
             with open(fpath, 'rb') as f:
                 pattern = pickle.load(f)
         except:
-            with open(os.path.dirname(__file__) + '/resource/regex.txt', 'r') as f:
+            with codecs.open(os.path.dirname(__file__) + '/resource/regex.txt', 'r', 'utf-8-sig') as f:
                 content = f.read()
             p = re.compile(content)
             with open(fpath, 'wb') as f:
                 pickle.dump(p, f)
             with open(fpath, 'rb') as f:
                 pattern = pickle.load(f)
-        with open(os.path.dirname(__file__) + '/resource/holi_solar.json', 'r', encoding='utf-8') as f:
+        with codecs.open(os.path.dirname(__file__) + '/resource/holi_solar.json', 'r', 'utf-8-sig') as f:
             holi_solar = json.load(f)
-        with open(os.path.dirname(__file__) + '/resource/holi_lunar.json', 'r', encoding='utf-8') as f:
+        with codecs.open(os.path.dirname(__file__) + '/resource/holi_lunar.json', 'r', 'utf-8-sig') as f:
             holi_lunar = json.load(f)
         return pattern, holi_solar, holi_lunar
 
@@ -109,7 +112,8 @@ class TimeNormalizer:
                 days = int(dic['timedelta'][:index-1])
                 result['year'] = int(days / 365)
                 result['month'] = int(days / 30 - result['year'] * 12)
-                result['day'] = int(days - result['year'] * 365 - result['month'] * 30)
+                result['day'] = int(days - result['year']
+                                    * 365 - result['month'] * 30)
                 index = dic['timedelta'].find(',')
                 time = dic['timedelta'][index+1:]
                 time = time.split(':')
@@ -125,7 +129,8 @@ class TimeNormalizer:
                 dic['timestamp'] = res[0].time.format("YYYY-MM-DD HH:mm:ss")
             else:
                 dic['type'] = 'timespan'
-                dic['timespan'] = [res[0].time.format("YYYY-MM-DD HH:mm:ss"), res[1].time.format("YYYY-MM-DD HH:mm:ss")]
+                dic['timespan'] = [res[0].time.format(
+                    "YYYY-MM-DD HH:mm:ss"), res[1].time.format("YYYY-MM-DD HH:mm:ss")]
         return json.dumps(dic)
 
     def __preHandling(self):
@@ -133,8 +138,10 @@ class TimeNormalizer:
         待匹配字符串的清理空白符和语气助词以及大写数字转化的预处理
         :return:
         """
-        self.target = StringPreHandler.delKeyword(self.target, u"\\s+")  # 清理空白符
-        self.target = StringPreHandler.delKeyword(self.target, u"[的]+")  # 清理语气助词
+        self.target = StringPreHandler.delKeyword(
+            self.target, u"\\s+")  # 清理空白符
+        self.target = StringPreHandler.delKeyword(
+            self.target, u"[的]+")  # 清理语气助词
         self.target = StringPreHandler.numberTranslator(self.target)  # 大写数字转化
 
     def __timeEx(self):
