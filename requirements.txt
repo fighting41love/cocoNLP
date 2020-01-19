@@ -3,4 +3,4 @@ pyhanlp
 phone
 phonenumbers
 regex
-arrow
+arrow==0.14.3
